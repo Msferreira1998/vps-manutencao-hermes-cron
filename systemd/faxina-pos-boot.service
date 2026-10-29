@@ -1,0 +1,13 @@
+[Unit]
+Description=Faxina semanal da VPS (pos-boot)
+
+[Service]
+Type=oneshot
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+WorkingDirectory=%h/Documentos/vps-manutencao
+ExecStart=/usr/bin/env node %h/Documentos/vps-manutencao/bin/faxina.mjs pos-boot
+TimeoutStartSec=4h
+ExecStartPre=/bin/sleep 60
+
+[Install]
+WantedBy=default.target

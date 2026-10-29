@@ -1,0 +1,9 @@
+[Unit]
+Description=Faxina semanal da VPS (limpar)
+
+[Service]
+Type=oneshot
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+WorkingDirectory=%h/Documentos/vps-manutencao
+ExecStart=/usr/bin/env node %h/Documentos/vps-manutencao/bin/faxina.mjs limpar
+TimeoutStartSec=4h

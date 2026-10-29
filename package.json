@@ -1,0 +1,9 @@
+{
+  "name": "vps-faxina",
+  "private": true,
+  "type": "module",
+  "bin": { "faxina": "bin/faxina.mjs" },
+  "scripts": {
+    "test:tdd": "TZ=Europe/Berlin node --test \"tests/*.test.mjs\""
+  }
+}

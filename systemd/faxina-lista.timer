@@ -1,0 +1,9 @@
+[Unit]
+Description=Lista da faxina semanal (domingo 21:00, Brasília)
+
+[Timer]
+OnCalendar=Sun *-*-* 21:00:00 America/Sao_Paulo
+Persistent=true
+
+[Install]
+WantedBy=timers.target

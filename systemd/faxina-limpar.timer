@@ -1,0 +1,8 @@
+[Unit]
+Description=Faxina semanal da VPS (segunda 04:00, Brasília)
+
+[Timer]
+OnCalendar=Mon *-*-* 04:00:00 America/Sao_Paulo
+
+[Install]
+WantedBy=timers.target
